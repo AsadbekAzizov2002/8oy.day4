@@ -13,6 +13,7 @@ import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import chap from "./../assets/chap.svg";
 import ong from "./../assets/ong.svg";
 import Table from "./Table";
+import Tables from "./Tables";
 
 const Zakas = () => {
   return (
@@ -94,7 +95,8 @@ const Zakas = () => {
           {/* table */}
 
           <div>
-            <Table />
+            {/* <Table /> */}
+            <Tables/>
           </div>
         </div>
       </main>
