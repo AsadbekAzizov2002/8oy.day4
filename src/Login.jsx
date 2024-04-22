@@ -4,6 +4,7 @@ import kamp from "./assets/kamp.png";
 import PersonIcon from "@mui/icons-material/Person";
 import LockIcon from "@mui/icons-material/Lock";
 import VisibilityIcon from "@mui/icons-material/Visibility";
+import { NavLink } from "react-router-dom";
 
 const Login = () => {
   return (
@@ -54,7 +55,11 @@ const Login = () => {
                   className=" w-[628px] ml-3 rounded border]"
                 />
               </span>
-              <button className=" py-3 px-[310px] border rounded-lg bg-blue-600 text-white mt-7 active:bg-blue-800">Войти</button>
+              
+                <button className=" py-3 px-[310px] border rounded-lg bg-blue-600 text-white mt-7 active:bg-blue-800">
+                 <NavLink to="/sidibar"> Войти</NavLink>
+                </button>
+              
             </div>
           </div>
         </div>
