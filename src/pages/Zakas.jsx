@@ -7,9 +7,12 @@ import SearchIcon from "@mui/icons-material/Search";
 import TableChartIcon from "@mui/icons-material/TableChart";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import ArrowDownwardIcon from "@mui/icons-material/ArrowDownward";
+import KeyboardArrowLeftIcon from "@mui/icons-material/KeyboardArrowLeft";
+import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 
 import chap from "./../assets/chap.svg";
 import ong from "./../assets/ong.svg";
+import Table from "./Table";
 
 const Zakas = () => {
   return (
@@ -57,17 +60,23 @@ const Zakas = () => {
           </span>
           <div className=" flex">
             <div className=" items-center mr-6 gap-3 flex w-[145px]">
-              <img className="w-2 border-2 p-2" src={chap} alt="" />
+              {/* <img className="w-2 border-2 p-2" src={chap} alt="" /> */}
+              <span className=" text-[#4094F7] border-2">
+                <KeyboardArrowLeftIcon />
+              </span>
               <h2 className=" font-normal text-sm">Сегодня</h2>
-              <img className=" w-2" src={ong} alt="" />
+              {/* <img className=" w-2" src={ong} alt="" /> */}
+              <span className=" text-[#4094F7] border-2">
+                <KeyboardArrowRightIcon />
+              </span>
             </div>
-            <div className=" gap-2 flex items-center">
-              <span>
+            <div className=" gap-2 justify-center mr-3 flex items-center">
+              <span className="w-5 h-5">
                 <TableChartIcon />
               </span>
               <h2 className=" font-medium text-sm">Столбцы</h2>
             </div>
-            <div className=" ml-2 gap-2 flex items-center">
+            <div className=" ml-2 gap-2 mr-3 flex items-center">
               <span>
                 <FilterAltIcon />
               </span>
@@ -79,6 +88,13 @@ const Zakas = () => {
               </span>
               <h2 className=" font-medium text-sm">Скачать</h2>
             </div>
+          </div>
+        </div>
+        <div>
+          {/* table */}
+
+          <div>
+            <Table />
           </div>
         </div>
       </main>
