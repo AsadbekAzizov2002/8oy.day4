@@ -61,12 +61,10 @@ const Zakas = () => {
           </span>
           <div className=" flex">
             <div className=" items-center mr-6 gap-3 flex w-[145px]">
-              {/* <img className="w-2 border-2 p-2" src={chap} alt="" /> */}
               <span className=" text-[#4094F7] border-2">
                 <KeyboardArrowLeftIcon />
               </span>
               <h2 className=" font-normal text-sm">Сегодня</h2>
-              {/* <img className=" w-2" src={ong} alt="" /> */}
               <span className=" text-[#4094F7] border-2">
                 <KeyboardArrowRightIcon />
               </span>
