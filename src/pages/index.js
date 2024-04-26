@@ -1,10 +1,17 @@
+import Aksiya from "./Aksiya";
 import Banner from "./Banner";
-import Dashbord from "./Dashbord";
-import Otzef from "./Otzef";
+import Otzif from "./Otzif";
 import Rassilka from "./Rassilka";
+
+import Dashbord from "./Dashbord";
+import Marceting from "./Marceting";
 import Sidibar from "./Sidibar";
 import Zakas from "./Zakas";
 
 
 
-export default (Banner,Dashbord,Otzef,Rassilka,Zakas,Sidibar)
+
+
+
+
+export default (Dashbord,Marceting,Zakas,Sidibar    ,Aksiya,Banner,Otzif,Rassilka   )

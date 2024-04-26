@@ -1,7 +1,4 @@
-import React, { useState } from 'react'
-
-
-
+import React, { useState } from "react";
 import Aksiya from "./Aksiya";
 import { Box, Tab, Tabs, Typography } from "@mui/material";
 import Banner from "./Banner";
@@ -15,11 +12,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import TableChartIcon from "@mui/icons-material/TableChart";
 import FilterAltIcon from "@mui/icons-material/FilterAlt";
 import VerticalAlignBottomIcon from "@mui/icons-material/VerticalAlignBottom";
-import Foydalanuvchi from './Foydalanuvchi';
-import Xodimlar from './Xodimlar';
-import Kopmaniya from './Kopmaniya';
-import Tovar from './Tovar';
-import Integratsiya from './Integratsiya';
 
 
 
@@ -35,7 +27,7 @@ function CustomTabPanel(props) {
       {...other}
     >
       {value === index && (
-        <Box sx={{ px: "5px", width: "1188px", border: "2px solid" }}>
+        <Box sx={{ px:"5px", width:"1188px",  border: "2px solid" }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -43,23 +35,21 @@ function CustomTabPanel(props) {
   );
 }
 
+const Marceting = () => {
 
 
+ const [value, setValue] = useState(0); // Set initial value to 0 for the first tab
 
-const Nastroyka = () => {
+ const handleChange = (event, newValue) => {
+   setValue(newValue);
+ };
 
 
-
-
-  const [value, setValue] = useState(0); // Set initial value to 0 for the first tab
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
   return (
-    <div>
-      <main>
-        <div>
+    <div className=" bg-[#DCE9F] border-2">
+      <main className=" w-[1400px] h-[643px]">
+        <div className=" w-[216px] h-full bg-white">
+          <h2 className=" text-3xl font-bold text-[#0974E9]">Delever</h2>
           <div>
             <Box
               sx={{
@@ -79,20 +69,19 @@ const Nastroyka = () => {
                   width: "110px",
                 }}
               >
-                <h1 className=" font-bold w- h-10 rounded bg-blue-500 items-center justify-center flex ml-4 mt-3">
-                  Delever
+                <h1 className=" font-bold w-10 h-10 rounded bg-blue-500 items-center justify-center flex ml-4 mt-3">
+                  D
                 </h1>
-                <Tab label="Ползователи" />
-                <Tab label="Персонал" />
+                <Tab label="Акции" />
+                <Tab label="Баннеры" />
 
-                <Tab label="Компания" />
-                <Tab label="Товары" />
-                <Tab label="Интеграции" />
+                <Tab label="Отзывы" />
+                <Tab label="Рассылка" />
               </Tabs>
               <div>
                 <div className=" flex justify-between w-full bg-white h-16">
                   <h2 className="pt-5 pl-5 font-semibold text-xl">
-                    Список компаний
+                    Список акций
                   </h2>
                   <div className=" flex">
                     <div className=" border  w-[196px] h-16 flex items-center">
@@ -138,27 +127,25 @@ const Nastroyka = () => {
                   </div>
                 </div>
                 <CustomTabPanel value={value} index={1}>
-                  <Foydalanuvchi />
+                  <Aksiya />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={2}>
-                  <Xodimlar />
+                  <Banner />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={3}>
-                  <Kopmaniya />
+                  <Otzif />
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={4}>
-                  <Tovar />
-                </CustomTabPanel>
-                <CustomTabPanel value={value} index={5}>
-                  <Integratsiya />
+                  <Rassilka />
                 </CustomTabPanel>
               </div>
             </Box>
           </div>
         </div>
+        <div></div>
       </main>
     </div>
   );
-}
+};
 
-export default Nastroyka
+export default Marceting;
