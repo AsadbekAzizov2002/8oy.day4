@@ -72,12 +72,15 @@ const Sidibar = () => {
             </h1>
             <Tab label=<AnalyticsIcon /> />
             <Tab label=<ShoppingCartIcon /> />
-            <Tab label=<GroupIcon /> sx={{
-                marginBottom:"340px"
-            }} />
-              <Tab label=<RadioButtonCheckedIcon /> />
-              <Tab label=<SettingsIcon /> />
-            
+            <Tab label=<GroupIcon /> />
+            <Tab label=<RadioButtonCheckedIcon /> />
+            <Tab
+              label=<SettingsIcon />
+              sx={{
+                marginBottom: "340px",
+              }}
+            />
+
             <img className=" mt-px]  ml-3 w-10 h-19" src={girl} alt="" />
           </Tabs>
           <CustomTabPanel value={value} index={0}>
@@ -93,7 +96,7 @@ const Sidibar = () => {
             <Klient />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={4}>
-            <Marceting/>
+            <Marceting />
           </CustomTabPanel>
           <CustomTabPanel value={value} index={5}>
             <Nastroyka />

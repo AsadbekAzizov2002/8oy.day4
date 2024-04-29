@@ -1,167 +1,70 @@
-import React from 'react'
+import * as React from "react";
+import PropTypes from "prop-types";
+import Tabs from "@mui/material/Tabs";
+import Tab from "@mui/material/Tab";
+import Typography from "@mui/material/Typography";
+import Box from "@mui/material/Box";
+import Km from "./Km";
+import Anniq from "./Anniq";
 
+function CustomTabPanel(props) {
+  const { children, value, index, ...other } = props;
 
-import MoreHorizIcon from "@mui/icons-material/MoreHoriz";
-
-
-const Foydalanuvchi = () => {
   return (
-    <div className=" ">
-      <main className="">
-        <div>
-          <div className="  flex items-center border h-12">
-            <h1 className=" font-semibold w-[320px] pl-4">Название</h1>
-            <h2 className=" font-semibold w-[560px] pl-4">Описание</h2>
-            <h2 className=" font-semibold  w-[240px] pl-[67px]">
-              Год основания
-            </h2>
-          </div>
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">L'Oréal</h2>
-            <h2 className="w-[650px]">
-              In the eighteenth century the German philosopher Immanuel Kant
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2008</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>{" "}
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">The Walt Disney Company</h2>
-            <h2 className="w-[650px]">
-              The long barrow was built on land previously inhabited in the
-              Mesolithic
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2003</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">Mitsubishi</h2>
-            <h2 className="w-[650px]">
-              Physical space is often conceived in three linear dimensions,
-              although
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2016</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>{" "}
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">The Walt Disney Company</h2>
-            <h2 className="w-[650px]">
-              The long barrow was built on land previously inhabited in the
-              Mesolithi
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">1998</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">TGillette</h2>
-            <h2 className="w-[650px]">
-              Maxwell's equations—the foundation of classical
-              electromagnetism—de
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2019</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">Sony</h2>
-            <h2 className="w-[650px]">
-              Physical space is often conceived in three linear dimensions,
-              although
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2020</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">Louis Vuitton</h2>
-            <h2 className="w-[650px]">
-              For athletes, high altitude produces two contradictory effects on
-              performance.
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2016</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">IBM</h2>
-            <h2 className="w-[650px]">
-              Physical space is often conceived in three linear dimensions,
-              although modern
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">1993</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">Nintendo</h2>
-            <h2 className="w-[650px]">
-              The long barrow was built on land previously inhabited in the
-              Mesolithic period
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2017</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">The Walt Disney Company</h2>
-            <h2 className="w-[650px]">
-              In the eighteenth century the German philosopher Immanuel Kant
-              developed a
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">1964</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">MasterCard</h2>
-            <h2 className="w-[650px]">
-              Physiological respiration involves the mechanisms that ensure that
-              the composition
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2020</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>{" "}
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">Gillette</h2>
-            <h2 className="w-[650px]">
-              In the eighteenth century the German philosopher Immanuel Kant
-              developed a
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2020</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>{" "}
-          <div className="  flex items-center border h-12">
-            <h2 className=" pl-4 w-[320px]">Starbucks</h2>
-            <h2 className="w-[650px]">
-              Physical space is often conceived in three linear dimensions,
-              although modern 
-            </h2>
-            <h2 className=" w-[0px] mr-[100px]">2020</h2>
-            <button className=" text-[#4094F7] pl-10">
-              <MoreHorizIcon />
-            </button>
-          </div>
-        </div>
-      </main>
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`simple-tabpanel-${index}`}
+      aria-labelledby={`simple-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3 }}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
     </div>
   );
 }
 
-export default Foydalanuvchi
+CustomTabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `simple-tab-${index}`,
+    "aria-controls": `simple-tabpanel-${index}`,
+  };
+}
+
+export default function BasicTabs() {
+  const [value, setValue] = React.useState(0);
+
+  const handleChange = (event, newValue) => {
+    setValue(newValue);
+  };
+
+  return (
+    <Box sx={{ width: "100%" }}>
+      <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
+        <Tabs
+          value={value}
+          onChange={handleChange}
+          aria-label="basic tabs example"
+        >
+          <Tab label="Фиксированная" {...a11yProps(0)} />
+          <Tab label="По километру" {...a11yProps(1)} />
+        </Tabs>
+      </Box>
+      <CustomTabPanel value={value} index={0}>
+        <Km />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={1}>
+        <Anniq />
+      </CustomTabPanel>
+    </Box>
+  );
+}
